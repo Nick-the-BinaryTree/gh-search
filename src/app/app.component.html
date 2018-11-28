@@ -1,0 +1,34 @@
+<div class="container">
+
+  <!-- Search controls -->
+  <h1>Search Github Users</h1>
+  <div class="form-group">
+      <label for="search-box">
+        Username:
+      </label>
+      <input
+          type="text"
+          class="form-control"
+          #search_box
+      />
+  </div>
+  <hr />
+
+  <!-- Search result -->
+  <a
+      [class.hide_data]="!should_display"
+      href="{{html_url}}"
+      target="_blank"
+      #search_result
+  >
+      <h2 #search_result__login>{{title}}</h2>
+      <img
+          src="{{avatar_url}}"
+          alt="avatar"
+          width="150px"
+          height="150px"
+          #search_result__avatar
+      />
+  </a>
+</div>
+
